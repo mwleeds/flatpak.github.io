@@ -72,7 +72,7 @@
   
   <p>For Debian Jessie, there is a custom apt repository available. To install, run the following as root:</p>
   
-  <pre>&#x000A;<span class="unselectable">$ </span>wget -O - https://sdk.gnome.org/apt/debian/conf/alexl.gpg.key|apt-key add -&#x000A;<span class="unselectable">$ </span>echo "deb [arch=amd64] https://sdk.gnome.org/apt/debian/ jessie main" > /etc/apt/sources.list.d/flatpak.list&#x000A;<span class="unselectable">$ </span>apt update&#x000A;<span class="unselectable">$ </span>apt install flatpak</pre>
+  <pre>&#x000A;<span class="unselectable">$ </span>wget -O - https://sdk.gnome.org/apt/debian/conf/alexl.gpg.key|apt-key add -&#x000A;<span class="unselectable">$ </span>echo "deb [arch=amd64] https://sdk.gnome.org/apt/debian/ jessie main" > /etc/apt/sources.list.d/flatpak.list&#x000A;<span class="unselectable">$ </span>apt install apt-transport-https&#x000A;<span class="unselectable">$ </span>apt update&#x000A;<span class="unselectable">$ </span>apt install flatpak</pre>
   
   <h3>Fedora</h3>
   
