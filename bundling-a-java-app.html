@@ -176,7 +176,7 @@
   <pre>&#x000A;all:&#x000A;      true&#x000A;install:&#x000A;      mkdir -p /app/SweetHome3D /app/bin&#x000A;      cp -ra * /app/SweetHome3D&#x000A;      ln -s /app/SweetHome3D/SweetHome3D /app/bin</pre></p>
   
   <p>Now, with these two files created, running the following command will download the tarball, extract it, move the files into the correct locations, finalize the build, and export the repo:
-  <pre>&#x000A;<span class="unselectable">$ </span>flatpak-builder --repo=repo sweethome3d-flatpak com.sweethome3d.App.json&#x000A;<span class="unselectable">$ </span>flatpak run com.sweethome3d.App</pre></p>
+  <pre>&#x000A;<span class="unselectable">$ </span>flatpak-builder --repo=repo sweethome3d-flatpak com.sweethome3d.App.json</pre></p>
   
   <p>Finally, enable the new repo as we did before, then install and run the application:
   <pre>&#x000A;<span class="unselectable">$ </span>flatpak --user remote-add --no-gpg-verify sweethome-repo2 repo&#x000A;<span class="unselectable">$ </span>flatpak --user install sweethome-repo2 com.sweethome3d.App&#x000A;<span class="unselectable">$ </span>flatpak run com.sweethome3d.App</pre></p>
