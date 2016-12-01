@@ -894,14 +894,8 @@
             they need.
           </p>
           <pre>&#x000A;<span class="unselectable">$ </span>flatpak remote-add --from gnome https://sdk.gnome.org/gnome.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak remote-add --from gnome-apps https://sdk.gnome.org/gnome-apps.flatpakrepo&#x000A;</pre>&#x000A;
-          <h3>3. Install a runtime</h3>
-          <p>
-            The runtime provides the dependencies needed by the apps in the GNOME
-            repository.
-          </p>
-          <pre>&#x000A;<span class="unselectable">$ </span>flatpak install gnome org.gnome.Platform//3.22&#x000A;</pre>&#x000A;
           <p>Once this is complete, you're all set to install some apps!</p>
-          <h3>4. View, install and run apps</h3>
+          <h3>3. View, install and run apps</h3>
           <p>
             To view which apps are available in the gnome-apps repository, just run:
           </p>
@@ -909,7 +903,7 @@
           <p>
             To download and install an app, like gedit, run:
           </p>
-          <pre>&#x000A;<span class="unselectable">$ </span>flatpak install gnome-apps org.gnome.gedit&#x000A;</pre>&#x000A;
+          <pre>&#x000A;<span class="unselectable">$ </span>flatpak install gnome-apps org.gnome.gedit&#x000A;</pre>&#x000A;This will automatically find and install the required runtime that the application depends on from&#x000A;the set of configured remotes.&#x000A;
           <p>
             Installed applications should appear in the usual place in your desktop. You can also run them from the command line:
           </p>
