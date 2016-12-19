@@ -62,7 +62,9 @@
   
   <p>A growing number of apps are available as Flatpaks, including LibreOffice, Telegram, GIMP, Inkscape, MyPaint and numerous core GNOME applications. This page provides an overview of what&#39;s available, along with instructions on how to try them. If you are new to Flatpak, it recommended to complete the <a href="./#users">introduction to installing and running Flatpaks</a> before trying them.</p>
   
-  <p>Each application requires a runtime. See the <a href="runtimes.html">runtimes page</a> for details on how to install these.</p>
+  <p>Each application requires a runtime, but most are automatically installed when needed. If not, the commands needed are included below.</p>
+  
+  <p>All the examples below install the applications system-wide and requires admin privileges. You can also add --user to the commandline examples to install to your homedirectory which needs no privileges.</p>
   
   <p>You can update all installed applications by running:</p>
   
@@ -72,7 +74,7 @@
   
   <p>LibreOffice is available as a standalone Flatpak file. This relies on the org.gnome.Platform 3.20 runtime, as well as the org.gnome.Platform.Locale runtime for it to appear in language other than US English. To download and install it, run:</p>
   
-  <pre>&#x000A;<span class="unselectable">$ </span>wget http://download.documentfoundation.org/libreoffice/flatpak/latest/LibreOffice.flatpak&#x000A;<span class="unselectable">$ </span>flatpak install --user --bundle LibreOffice.flatpak</pre>
+  <pre>&#x000A;<span class="unselectable">$ </span>wget http://download.documentfoundation.org/libreoffice/flatpak/latest/LibreOffice.flatpak&#x000A;<span class="unselectable">$ </span>flatpak install --bundle LibreOffice.flatpak</pre>
   
   <p>For more information, see the LibreOffice <a href="http://www.libreoffice.org/download/flatpak/">Flatpak page</a>.</p>
   
@@ -98,29 +100,29 @@
   
   <p>Preview release of MonoDevelop as a Flatpak is available here:</p>
   
-  <pre>&#x000A;<span class="unselectable">$ </span>flatpak install --user --from https://download.mono-project.com/repo/monodevelop.flatpakref&#x000A;<span class="unselectable">$ </span>flatpak run com.xamarin.MonoDevelop</pre>
+  <pre>&#x000A;<span class="unselectable">$ </span>flatpak install --from https://download.mono-project.com/repo/monodevelop.flatpakref&#x000A;<span class="unselectable">$ </span>flatpak run com.xamarin.MonoDevelop</pre>
   
   <p>See also: http://www.monodevelop.com/download/linux/</p>
   
   <h2><a name="hexchat"></a>Hexchat</h2>
   
-  <pre>&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists tingping https://dl.tingping.se/flatpak/tingping.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak --user install tingping io.github.Hexchat</pre>
+  <pre>&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists tingping https://dl.tingping.se/flatpak/tingping.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak install tingping io.github.Hexchat</pre>
   
   <h2><a name="gnome-twitch"></a>Gnome Twitch</h2>
   
-  <pre>&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists tingping https://dl.tingping.se/flatpak/tingping.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak --user install tingping com.vinszent.GnomeTwitch</pre>
+  <pre>&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists tingping https://dl.tingping.se/flatpak/tingping.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak install tingping com.vinszent.GnomeTwitch</pre>
   
   <h2><a name="pithos"></a>Pithos – Pandora Radio Client</h2>
   
-  <pre>&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists tingping https://dl.tingping.se/flatpak/tingping.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak --user install tingping io.github.Pithos</pre>
+  <pre>&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists tingping https://dl.tingping.se/flatpak/tingping.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak install tingping io.github.Pithos</pre>
   
   <h2><a name="pithos"></a>Transmission Gtk</h2>
   
-  <pre>&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists tingping https://dl.tingping.se/flatpak/tingping.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak --user install tingping io.github.TransmissionRemoteGtk</pre>
+  <pre>&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists tingping https://dl.tingping.se/flatpak/tingping.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak install tingping io.github.TransmissionRemoteGtk</pre>
   
   <h2><a name="pithos"></a>Gnome Mpv</h2>
   
-  <pre>&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists tingping https://dl.tingping.se/flatpak/tingping.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak --user install tingping io.github.GnomeMpv</pre>
+  <pre>&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists tingping https://dl.tingping.se/flatpak/tingping.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak install tingping io.github.GnomeMpv</pre>
   
   <h2><a name="pitivi"></a>Pitivi</h2>
   
