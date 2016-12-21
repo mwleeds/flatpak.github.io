@@ -60,19 +60,15 @@
   <section class=""><div class="container"><div class="row"><div class="col-lg-10 col-lg-offset-1">
   <h1>Apps</h1>
   
-  <p>A growing number of apps are available as Flatpaks, including LibreOffice, Telegram, GIMP, Inkscape, MyPaint and numerous core GNOME applications. This page provides an overview of what&#39;s available, along with instructions on how to try them. If you are new to Flatpak, it recommended to complete the <a href="./#users">introduction to installing and running Flatpaks</a> before trying them.</p>
+  <p>This page lists some of the apps that are available as Flatpaks, along with instructions for how to try them.</p>
   
-  <p>Each application requires a runtime, but most are automatically installed when needed. If not, the commands needed are included below.</p>
+  <p>The instructions on this page require Flatpak 0.6.13 or newer. To find out how to install it, see <a href="getting.html">Getting Flatpak</a>. It is also recommended to complete the <a href="./#users">introduction to installing and running Flatpaks</a> before installing the apps on this page.</p>
   
-  <p>All the examples below install the applications system-wide and requires admin privileges. You can also add --user to the commandline examples to install to your homedirectory which needs no privileges.</p>
-  
-  <p>You can update all installed applications by running:</p>
-  
-  <pre>&#x000A;<span class="unselectable">$ </span>flatpak update</pre>
+  <p>All the examples install the apps system-wide and therefore require admin privileges. To install to your home directory and avoid the need for a password, just add <code>--user</code> to the install command. Once you have installed some applications, to update them run <code>flatpak update</code>.</p>
   
   <h2><a name="libreoffice"></a>LibreOffice</h2>
   
-  <p>LibreOffice is available as a standalone Flatpak file. This relies on the org.gnome.Platform 3.20 runtime, as well as the org.gnome.Platform.Locale runtime for it to appear in language other than US English. To download and install it, run:</p>
+  <p>LibreOffice is available as a standalone Flatpak file. This relies on the org.gnome.Platform 3.20 runtime, as well as the org.gnome.Platform.Locale runtime for it to appear in language other than US English. To download and install LibreOffice, run:</p>
   
   <pre>&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo&#x000A;<span class="unselectable">$ </span>wget http://download.documentfoundation.org/libreoffice/flatpak/latest/LibreOffice.flatpak&#x000A;<span class="unselectable">$ </span>flatpak install --bundle LibreOffice.flatpak</pre>
   
@@ -80,47 +76,57 @@
   
   <h2><a name="telegram"></a>Telegram</h2>
   
-  <p>Experimental nightly builds of the <a href="https://telegram.org/">Telegram</a> desktop client are being made available by <a href="http://www.jgrulich.cz/">Jan Grulich</a>. These require the 3.20 version of the org.gnome.Platform runtime. To install, run:</p>
+  <p>Experimental nightly builds of the <a href="https://telegram.org/">Telegram</a> desktop client are being produced by <a href="http://www.jgrulich.cz/">Jan Grulich</a>. These require the 3.20 version of the org.gnome.Platform runtime. To install, run:</p>
   
-  <pre>&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak install --from https://jgrulich.fedorapeople.org/telegram/telegram.flatpakref&#x000A;<span class="unselectable">$ </span>flatpak run org.telegram.TelegramDesktopDevel</pre>
+  <pre>&#x000A;<span class="unselectable">$ </span>flatpak install --from https://jgrulich.fedorapeople.org/telegram/telegram.flatpakref&#x000A;<span class="unselectable">$ </span>flatpak run org.telegram.TelegramDesktopDevel</pre>
   
   <h2><a name="spotify"></a>Spotify</h2>
   
-  <p>Builds of the <a href="https://spotify.com/">Spotify</a> desktop client are being made available. To install, run:</p>
+  <p>Builds of the latest <a href="https://spotify.com/">Spotify</a> desktop client are being produced by Alex Larsson. To install, run:</p>
   
   <pre>&#x000A;<span class="unselectable">$ </span>flatpak install --from https://s3.amazonaws.com/alexlarsson/spotify-repo/spotify.flatpakref&#x000A;<span class="unselectable">$ </span>flatpak run com.spotify.Client</pre>
   
   <h2><a name="skype"></a>Skype</h2>
   
-  <p>Builds of the alpha version of the <a href="https://skype.com/">Skype</a> desktop client are being made available. To install, run:</p>
+  <p>Builds of the alpha version of the <a href="https://skype.com/">Skype</a> desktop client are being made available by Alex Larsson. To install, run:</p>
   
   <pre>&#x000A;<span class="unselectable">$ </span>flatpak install --from https://s3.amazonaws.com/alexlarsson/skype-repo/skype.flatpakref&#x000A;<span class="unselectable">$ </span>flatpak run com.skype.Client</pre>
   
   <h2><a name="monodevelop"></a>MonoDevelop</h2>
   
-  <p>Preview release of MonoDevelop as a Flatpak is available here:</p>
+  <p>MonoDevelop is available as a Flatpak preview from Xamarin:</p>
   
   <pre>&#x000A;<span class="unselectable">$ </span>flatpak install --from https://download.mono-project.com/repo/monodevelop.flatpakref&#x000A;<span class="unselectable">$ </span>flatpak run com.xamarin.MonoDevelop</pre>
   
-  <p>See also: http://www.monodevelop.com/download/linux/</p>
+  <p>See the <a href="http://www.monodevelop.com/download/linux/">MonoDevelop Linux download page</a> for more information.</p>
   
   <h2><a name="hexchat"></a>HexChat</h2>
   
+  <p>Builds of the popular IRC client, from their developers:</p>
+  
   <pre>&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists tingping https://dl.tingping.se/flatpak/tingping.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak install tingping io.github.Hexchat</pre>
   
-  <h2><a name="gnome-twitch"></a>Gnome Twitch</h2>
+  <h2><a name="gnome-twitch"></a>GNOME Twitch</h2>
+  
+  <p>GNOME client for the Twitch video platform:</p>
   
   <pre>&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists tingping https://dl.tingping.se/flatpak/tingping.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak install tingping com.vinszent.GnomeTwitch</pre>
   
-  <h2><a name="pithos"></a>Pithos – Pandora Radio Client</h2>
+  <h2><a name="pithos"></a>Pithos</h2>
+  
+  <p>Flatpak builds of the Pandora radio client:</p>
   
   <pre>&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists tingping https://dl.tingping.se/flatpak/tingping.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak install tingping io.github.Pithos</pre>
   
-  <h2><a name="transmission-remote-gtk"></a>Transmission Remote Gtk</h2>
+  <h2><a name="transmission-remote-gtk"></a>Transmission Remote GTK</h2>
+  
+  <p>GTK remote client for Transmission:</p>
   
   <pre>&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists tingping https://dl.tingping.se/flatpak/tingping.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak install tingping io.github.TransmissionRemoteGtk</pre>
   
-  <h2><a name="gnome-mpv"></a>Gnome Mpv</h2>
+  <h2><a name="gnome-mpv"></a>GNOME MPV</h2>
+  
+  <p>GTK+ front-end for the MPV video player:</p>
   
   <pre>&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak remote-add --if-not-exists tingping https://dl.tingping.se/flatpak/tingping.flatpakrepo&#x000A;<span class="unselectable">$ </span>flatpak install tingping io.github.GnomeMpv</pre>
   

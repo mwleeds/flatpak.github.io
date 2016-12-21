@@ -1,0 +1,265 @@
+<section class=""><div class="container"><div class="row"><div class="col-lg-10 col-lg-offset-1">
+:markdown
+  # Apps
+
+  This page lists some of the apps that are available as Flatpaks, along with instructions for how to try them.
+
+<<<<<<< f5a18b80df2787c2ce80286ad9289177e3f9ba7b
+  The instructions on this page require Flatpak 0.6.13 or newer. To find out how to install it, see [Getting Flatpak](getting.html). It is also recommended to complete the [introduction to installing and running Flatpaks](index.html#users) before installing the apps on this page.
+=======
+  Each application requires a runtime, but most are automatically installed when needed. If not, the commands needed are included below.
+
+  All the examples below install the applications system-wide and requires admin privileges. You can also add --user to the commandline examples to install to your homedirectory which needs no privileges.
+
+  You can update all installed applications by running:
+
+  <pre>
+  <span class="unselectable">$ </span>flatpak update
+  </pre>
+>>>>>>> hotfix: close a tag
+
+  All the examples install the apps system-wide and therefore require admin privileges. To install to your home directory and avoid the need for a password, just add `--user` to the install command. Once you have installed some applications, to update them run `flatpak update`.
+
+  ## <a name="libreoffice"></a>LibreOffice
+
+  LibreOffice is available as a standalone Flatpak file. This relies on the org.gnome.Platform 3.20 runtime, as well as the org.gnome.Platform.Locale runtime for it to appear in language other than US English. To download and install LibreOffice, run:
+
+  <pre>
+  <span class="unselectable">$ </span>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo
+  <span class="unselectable">$ </span>wget http://download.documentfoundation.org/libreoffice/flatpak/latest/LibreOffice.flatpak
+  <span class="unselectable">$ </span>flatpak install --bundle LibreOffice.flatpak
+  </pre>
+
+  For more information, see the LibreOffice [Flatpak page](http://www.libreoffice.org/download/flatpak/).
+
+  ## <a name="telegram"></a>Telegram
+
+  Experimental nightly builds of the [Telegram](https://telegram.org/) desktop client are being produced by [Jan Grulich](http://www.jgrulich.cz/). These require the 3.20 version of the org.gnome.Platform runtime. To install, run:
+
+  <pre>
+  <span class="unselectable">$ </span>flatpak install --from https://jgrulich.fedorapeople.org/telegram/telegram.flatpakref
+  <span class="unselectable">$ </span>flatpak run org.telegram.TelegramDesktopDevel
+  </pre>
+
+  ## <a name="spotify"></a>Spotify
+
+  Builds of the latest [Spotify](https://spotify.com/) desktop client are being produced by Alex Larsson. To install, run:
+
+  <pre>
+  <span class="unselectable">$ </span>flatpak install --from https://s3.amazonaws.com/alexlarsson/spotify-repo/spotify.flatpakref
+  <span class="unselectable">$ </span>flatpak run com.spotify.Client
+  </pre>
+
+  ## <a name="skype"></a>Skype
+
+  Builds of the alpha version of the [Skype](https://skype.com/) desktop client are being made available by Alex Larsson. To install, run:
+
+  <pre>
+  <span class="unselectable">$ </span>flatpak install --from https://s3.amazonaws.com/alexlarsson/skype-repo/skype.flatpakref
+  <span class="unselectable">$ </span>flatpak run com.skype.Client
+  </pre>
+
+  ## <a name="monodevelop"></a>MonoDevelop
+
+  MonoDevelop is available as a Flatpak preview from Xamarin:
+
+  <pre>
+  <span class="unselectable">$ </span>flatpak install --from https://download.mono-project.com/repo/monodevelop.flatpakref
+  <span class="unselectable">$ </span>flatpak run com.xamarin.MonoDevelop
+  </pre>
+
+  See the [MonoDevelop Linux download page](http://www.monodevelop.com/download/linux/) for more information.
+
+  ## <a name="hexchat"></a>HexChat
+
+  Builds of the popular IRC client, from their developers:
+
+  <pre>
+  <span class="unselectable">$ </span>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo
+  <span class="unselectable">$ </span>flatpak remote-add --if-not-exists tingping https://dl.tingping.se/flatpak/tingping.flatpakrepo
+  <span class="unselectable">$ </span>flatpak install tingping io.github.Hexchat
+  </pre>
+
+  ## <a name="gnome-twitch"></a>GNOME Twitch
+
+  GNOME client for the Twitch video platform:
+
+  <pre>
+  <span class="unselectable">$ </span>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo
+  <span class="unselectable">$ </span>flatpak remote-add --if-not-exists tingping https://dl.tingping.se/flatpak/tingping.flatpakrepo
+  <span class="unselectable">$ </span>flatpak install tingping com.vinszent.GnomeTwitch
+  </pre>
+
+  ## <a name="pithos"></a>Pithos
+
+  Flatpak builds of the Pandora radio client:
+
+  <pre>
+  <span class="unselectable">$ </span>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo
+  <span class="unselectable">$ </span>flatpak remote-add --if-not-exists tingping https://dl.tingping.se/flatpak/tingping.flatpakrepo
+  <span class="unselectable">$ </span>flatpak install tingping io.github.Pithos
+  </pre>
+
+  ## <a name="transmission-remote-gtk"></a>Transmission Remote GTK
+
+  GTK remote client for Transmission:
+
+  <pre>
+  <span class="unselectable">$ </span>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo
+  <span class="unselectable">$ </span>flatpak remote-add --if-not-exists tingping https://dl.tingping.se/flatpak/tingping.flatpakrepo
+  <span class="unselectable">$ </span>flatpak install tingping io.github.TransmissionRemoteGtk
+  </pre>
+
+  ## <a name="gnome-mpv"></a>GNOME MPV
+
+  GTK+ front-end for the MPV video player:
+
+  <pre>
+  <span class="unselectable">$ </span>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo
+  <span class="unselectable">$ </span>flatpak remote-add --if-not-exists tingping https://dl.tingping.se/flatpak/tingping.flatpakrepo
+  <span class="unselectable">$ </span>flatpak install tingping io.github.GnomeMpv
+  </pre>
+
+  ## <a name="pitivi"></a>Pitivi
+
+  Multiple versions of the [Pitivi video editor](http://www.pitivi.org/) are available as Flatkpaks, including stable, 0.96 and master. These require the 3.20 version of the org.gnome.Platform runtime. The Pitivi Flatpak repository can be added by downloading and installing a repository file:
+
+  <pre>
+  <span class="unselectable">$ </span>flatpak remote-add --from pitivi http://flatpak.pitivi.org/pitivi.flatpakrepo
+  </pre>
+
+  It is then simply a case of picking the version you want and installing. For example, to install master:
+
+  <pre>
+  <span class="unselectable">$ </span>flatpak install pitivi org.pitivi.Pitivi//master
+  </pre>
+
+  ## <a name="nightly-graphics"></a>Nightly graphics apps
+
+  The nightly-graphics repository contains daily development builds of common graphics applications, including:
+
+  * [GIMP](http://gimp.org)
+  * [Inkscape](http://inkscape.org)
+  * [MyPaint](http://mypaint.org)
+  * [Scribus](https://www.scribus.net/)
+
+  Applications in this repository require the org.gnome.Platform runtime. See the [runtimes page](runtimes.html) for details on how to add the gnome remote so they will be found.
+
+  To add the nightly-graphics repository, run:
+
+  <pre>
+  <span class="unselectable">$ </span>flatpak remote-add --from nightly-graphics http://209.132.179.2/nightly-graphics.flatpakrepo
+  </pre>
+
+  List the apps in the repository:
+
+  <pre>
+  <span class="unselectable">$ </span>flatpak remote-ls nightly-graphics --app
+  </pre>
+
+  To install gimp for example, run:
+
+  <pre>
+  <span class="unselectable">$ </span>flatpak install nightly-graphics org.gimp.GimpDevel
+  </pre>
+
+  ## <a name="stable-gnome"></a>Stable GNOME applications
+
+  A collection of GNOME applications are available from the latest upstream release (version 3.22). This includes:
+
+  * [Builder](https://wiki.gnome.org/Apps/Builder)
+  * [Calculator](https://wiki.gnome.org/Apps/Calculator)
+  * [Calendar](https://wiki.gnome.org/Apps/Calendar)
+  * Characters
+  * [Clocks](https://wiki.gnome.org/Apps/Clocks)
+  * [Dictionary](https://wiki.gnome.org/Apps/Dictionary)
+  * [Evince](https://wiki.gnome.org/Apps/Evince)
+  * [Eye of Gnome](https://wiki.gnome.org/Apps/EyeOfGnome)
+  * [Gedit](https://wiki.gnome.org/Apps/Gedit)
+  * [Iagno](https://wiki.gnome.org/Apps/Iagno)
+  * [Maps](https://wiki.gnome.org/Apps/Maps)
+  * [Notes](https://wiki.gnome.org/Apps/Bijiben) (Bijiben)
+  * [Polari](https://wiki.gnome.org/Apps/Polari)
+  * [Rhythmbox](https://wiki.gnome.org/Apps/Rhythmbox)
+  * [Todo](https://wiki.gnome.org/Apps/Todo)
+  * [Weather](https://wiki.gnome.org/Apps/Weather)
+  * [Web](https://wiki.gnome.org/Apps/Epiphany) (Epiphany)
+
+  These can be found in the gnome-apps repository, which can be added with:
+
+  <pre>
+  <span class="unselectable">$ </span>flatpak remote-add --if-not-exists gnome https://sdk.gnome.org/gnome.flatpakrepo
+  <span class="unselectable">$ </span>flatpak remote-add --from gnome-apps https://sdk.gnome.org/gnome-apps.flatpakrepo
+  </pre>
+
+  You can then list available apps using:
+
+  <pre>
+  <span class="unselectable">$ </span>flatpak remote-ls gnome-apps --app
+  </pre>
+
+  Applications in this repository require the org.gnome.Platform runtime. See the [runtimes page](runtimes.html) for details on how to add the gnome remote so they will be found.
+  You can then install for instance gedit like this:
+
+  <pre>
+  <span class="unselectable">$ </span>flatpak install gnome-apps org.gnome.gedit
+  </pre>
+
+  ## <a name="nightly-gnome"></a>Nightly GNOME applications
+
+  The GNOME nightly apps repository includes a collection of GNOME applications that are built daily from Git master. It includes:
+
+  * [Builder](https://wiki.gnome.org/Apps/Builder)
+  * [Calculator](https://wiki.gnome.org/Apps/Calculator)
+  * [Calendar](https://wiki.gnome.org/Apps/Calendar)
+  * Characters
+  * [Clocks](https://wiki.gnome.org/Apps/Clocks)
+  * [Dictionary](https://wiki.gnome.org/Apps/Dictionary)
+  * [Documents](https://wiki.gnome.org/Apps/Documents)
+  * [Evince](https://wiki.gnome.org/Apps/Evince)
+  * [Eye of Gnome](https://wiki.gnome.org/Apps/EyeOfGnome)
+  * [Games](https://wiki.gnome.org/Apps/Games)
+  * [Gedit](https://wiki.gnome.org/Apps/Gedit)
+  * [Gitg](https://wiki.gnome.org/Apps/Gitg)
+  * [Glade](https://wiki.gnome.org/Apps/Glade)
+  * [Iagno](https://wiki.gnome.org/Apps/Iagno)
+  * [Maps](https://wiki.gnome.org/Apps/Maps)
+  * News
+  * [Notes](https://wiki.gnome.org/Apps/Bijiben) (Bijiben)
+  * [Polari](https://wiki.gnome.org/Apps/Polari)
+  * [Rhythmbox](https://wiki.gnome.org/Apps/Rhythmbox)
+  * [Todo](https://wiki.gnome.org/Apps/Todo)
+  * [Videos](https://wiki.gnome.org/Apps/Totem) (Totem)
+  * [Web](https://wiki.gnome.org/Apps/Epiphany) (Epiphany)
+  * [Weather](https://wiki.gnome.org/Apps/Weather)
+
+  To add the GNOME nightly apps repository, run:
+
+  <pre>
+  <span class="unselectable">$ </span>flatpak remote-add --if-not-exists gnome-nightly https://sdk.gnome.org/gnome-nightly.flatpakrepo
+  <span class="unselectable">$ </span>flatpak remote-add --from gnome-nightly-apps https://sdk.gnome.org/gnome-apps-nightly.flatpakrepo
+  </pre>
+
+  And to list the apps in the repository:
+
+  <pre>
+  <span class="unselectable">$ </span>flatpak remote-ls gnome-nightly-apps --app
+  </pre>
+
+  Applications in this repository require the nightly version of the org.gnome.Platform runtime. See the [runtimes page](runtimes.html) for details on how to add the gnome-nightly remote so they will be found.
+
+  And to install an app:
+
+  <pre>
+  <span class="unselectable">$ </span>flatpak install gnome-nightly-apps org.gnome.gedit
+  </pre>
+
+  And to update it:
+
+  <pre>
+  <span class="unselectable">$ </span>flatpak update org.gnome.gedit
+  </pre>
+
+
+
+</div></div></div></section>
